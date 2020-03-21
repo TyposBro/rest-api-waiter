@@ -1,0 +1,43 @@
+<div class="ion-padding">
+
+  <ion-label>
+    <ion-icon slot="start" name="star"></ion-icon>
+    <ion-note>{{product.title}}</ion-note>
+  </ion-label>
+
+
+
+  <ion-item lines="none">
+    <!-- <ion-label>
+      <ion-icon slot="start" name="star"></ion-icon>
+      <ion-note>Quantity</ion-note>
+    </ion-label> -->
+    <ion-grid>
+      <ion-row>
+
+        <ion-col size="3">
+          <ion-button fill="solid" color="light" (click)="remove()" size="small">
+            <ion-icon slot="icon-only" name="remove" color="medium" size="small"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-input size="small" maxlength="3" [(ngModel)]='newProduct.quantity' value="{{ newProduct.quantity }}">
+          </ion-input>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button fill="solid" color="light" (click)="add()" size="small">
+            <ion-icon slot="icon-only" name="add" color="medium" size="small"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+
+
+  <div class="ion-padding ion-text-center" style="padding-bottom: 0px;">
+    <ion-button (click)="confirm()" color="primary" size="medium">Confirm</ion-button>
+  </div>
+</div>

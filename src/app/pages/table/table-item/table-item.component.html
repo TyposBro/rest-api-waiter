@@ -1,0 +1,5 @@
+<button class="{{btnClass}} " (click)="onSelect.emit(item)">
+  {{ item.tableNumber }} <br>
+  <small> Pax: 4 </small> <br>
+  <small> Time: {{time | date: "shortTime"}} </small> <br>
+</button>

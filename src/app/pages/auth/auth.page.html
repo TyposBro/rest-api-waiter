@@ -1,0 +1,29 @@
+<ion-content color="primary" class='ion-padding'>
+  <ion-grid>
+    <ion-row color="primary" class="ion-align-items-center ion-justify-content-center">
+      <ion-col class='ion-align-self-center'>
+        <form #form="ngForm" (ngSubmit)="login(form)">
+          <div class='ion-text-center'>
+            <h3> {{ 'AUTH.LOGIN' | translate }} </h3>
+          </div>
+          <div class='ion-padding'>
+            <ion-item>
+              <ion-input name="username" type="text" [attr.placeholder]="'AUTH.USERNAME' | translate" ngModel required>
+              </ion-input>
+            </ion-item>
+          </div>
+          <div class='ion-padding'>
+            <ion-item>
+              <ion-input name="password" type="password" [attr.placeholder]="'AUTH.PASSWORD' | translate" ngModel
+                required></ion-input>
+            </ion-item>
+          </div>
+          <div class='ion-padding'>
+            <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block" color="success">
+              {{ 'AUTH.LOGIN' | translate }}
+            </ion-button>
+          </div>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>

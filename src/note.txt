@@ -1,0 +1,3 @@
+index.html ga
+link ....... W3.Css ni qushdim
+button class="w3-button w3-red w3-padding-large w3-round-large w3-btn"

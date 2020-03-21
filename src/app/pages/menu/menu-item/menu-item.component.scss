@@ -1,0 +1,13 @@
+ion-item {
+  --padding-bottom: 20px;
+}
+
+ion-img {
+  width: 100%;
+  height: calc(width * 0.75);
+}
+
+ion-label {
+    background-color: var(--ion-color-light);
+    padding: 5px 0;
+}

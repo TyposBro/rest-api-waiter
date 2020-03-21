@@ -1,0 +1,41 @@
+<ion-header>
+  <!-- <ion-toolbar *ngIf="showSearchbar">
+    <ion-searchbar [formControl]="searchControl" mode="md" animated type="text"
+      [attr.placeholder]="'COMMON.SEARCH' | translate" showCancelButton="always" cancelButtonIcon="md-backspace"
+      (ionCancel)="toggleSearchbar('clear')"></ion-searchbar>
+  </ion-toolbar> -->
+
+
+  <!-- *ngIf="!showSearchbar" -->
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home" fill="clear" size="small">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>
+      {{ 'ORDER.TITLE' | translate }}
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button fill="clear" size="small" (click)="sync()">
+        <ion-icon slot="icon-only" name="sync"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" size="small" (click)="toggleSearchbar()">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngIf='orders$ | async as orders'>
+    <ion-list *ngFor='let order of orders'>
+      <app-order-item [order]='order' (edit)='editOrder($event)' (delete)='deleteOrder($event)'
+        (complete)='completeOrder($event)'></app-order-item>
+    </ion-list>
+  </ng-container>
+</ion-content>

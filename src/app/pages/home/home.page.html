@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Magnifico
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" size="small">
+        <ion-icon slot="icon-only" name="edit"></ion-icon>
+        <ion-select [attr.placeholder]="'LANGUAGE.SELECT_ONE' | translate" [(ngModel)]="selectedLanguage"
+          (ionChange)="languageChanged()" [okText]="'LANGUAGE.OK' | translate"
+          [cancelText]="'LANGUAGE.CANCEL' | translate">
+          <ion-select-option value="en"> {{ 'LANGUAGE.ENGLISH' | translate }}
+          </ion-select-option>
+          <ion-select-option value="uz"> {{ 'LANGUAGE.UZBEK' | translate }}
+          </ion-select-option>
+          <ion-select-option value="ru"> {{ 'LANGUAGE.RUSSIAN' | translate }}
+          </ion-select-option>
+        </ion-select>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-segment>
+      <ion-segment-button value="table" routerLink="/table">
+        <div>
+          <ion-icon name="apps"></ion-icon> <br />
+          <ion-label size="small">
+            <ion-note> {{ 'TABLE.TITLE' | translate }}</ion-note>
+          </ion-label>
+        </div>
+      </ion-segment-button>
+
+      <ion-segment-button value="menu" routerLink="/menu">
+        <div>
+          <ion-icon name="restaurant"></ion-icon> <br />
+          <ion-label size="small">
+            <ion-note>{{ 'MENU.TITLE' | translate }}</ion-note>
+          </ion-label>
+        </div>
+      </ion-segment-button>
+
+      <ion-segment-button value="order" routerLink="/order">
+        <div>
+          <ion-icon name="pricetags"></ion-icon> <br />
+          <ion-label size="small">
+            <ion-note>{{ 'ORDER.TITLE' | translate }}</ion-note>
+          </ion-label>
+        </div>
+      </ion-segment-button>
+
+      <ion-segment-button value="history" routerLink="/history">
+        <div>
+          <ion-icon name="time"></ion-icon> <br />
+          <ion-label size="small">
+            <ion-note>{{ 'HISTORY.TITLE' | translate }}</ion-note>
+          </ion-label>
+        </div>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>

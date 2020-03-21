@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home" fill="clear" size="small">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>
+      {{ 'CART.TITLE' | translate }}
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <!-- <ion-button fill="clear" size="small" (click)="sync()">
+        <ion-icon slot="icon-only" name="sync"></ion-icon>
+      </ion-button> -->
+      <!-- <ion-button fill="clear" size="small" (click)="toggleSearchbar()">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button> -->
+
+      <ion-button fill="clear" size="small" routerLink="/meal">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- <table-preview></table-preview> -->
+
+  <ng-container *ngIf="cartItems$ | async as cartItems">
+    <!-- mealItems are found -->
+    <ion-list *ngIf="cartItems.length">
+      <cart-item *ngFor="let cartItem of cartItems" [item]="cartItem" (edit)="onCartEdit(cartItem)"
+        (delete)="onCartDelete(cartItem)">
+      </cart-item>
+
+    </ion-list>
+
+    <!-- * No mealItems are found -->
+    <ion-grid *ngIf="!cartItems.length">
+      <ion-row class="ion-align-items-center">
+        <ion-col>
+          {{ 'COMMON.NOT_FOUND' | translate }}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+
+    <ion-item lines="none">
+      <ng-container *ngIf='cartItems$ | async as cartItems'>
+        <ng-container *ngIf='total$ | async as total'>
+          <ion-buttons slot="start">
+            <ion-button fill="solid" (click)="presentAlert(cartItems)" size="small" color="danger">
+              <ion-label class="other-label">
+                {{ 'CART.SHORTCUT' | translate }}
+              </ion-label>
+            </ion-button>
+          </ion-buttons>
+
+
+          <ion-buttons slot="end">
+            <ion-button fill="solid" (click)="onCartSubmit(cartItems, total)" color="success" size="large">
+              <ion-label>
+                {{ 'CART.COMPLETE' | translate }}
+              </ion-label>
+            </ion-button>
+          </ion-buttons>
+        </ng-container>
+      </ng-container>
+
+    </ion-item>
+    <ng-container *ngIf='total$ | async as total'>
+      <h1>{{total}}</h1>
+
+    </ng-container>
+
+
+
+
+
+
+  </ng-container>
+</ion-content>

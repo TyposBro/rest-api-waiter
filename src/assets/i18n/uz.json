@@ -1,0 +1,71 @@
+{
+    "COMMON": {
+        "NOT_FOUND": "Hech narsa topilmadi :(",
+        "SEARCH": "Qidirish",
+        "ERRORS": {
+            "100": "Xato 100: ...",
+            "101": "Xato 101: ..."
+        }
+    },
+    "HOME": {
+        "ERRORS": {
+            "200": "Xato 200: ...",
+            "201": "Xato 201: ..."
+        }
+    },
+    "TABLE": {
+        "TITLE": "Stollar",
+        "ERRORS": {
+            "300": "Xato 300: ...",
+            "301": "Xato 301: ..."
+        }
+    },
+    "MENU": {
+        "TITLE": "Menu",
+        "ERRORS": {
+            "400": "Xato 400: Http so'rovida xato. Iltimos, Internetni tekshib ko'ring ",
+            "401": "translation??? ~ Xato 401: Failed due to Local Storage connection!",
+            "402": ""
+        }
+    },
+    "MEAL": {
+        "TITLE": "Taomlar"
+    },
+    "CART": {
+        "TITLE": "Carta",
+        "PENDING_CUSTOMERS": "Pending Customers",
+        "ITEMS": "Xaridlar",
+        "PAYMENT": "Payment",
+        "CASH": "Naqt pul",
+        "CARD": "Plastik karta",
+        "OTHER": "Boshqa",
+        "COMPLETE": "Yakunlash",
+        "CART_EMPTY": "Sizni kartangiz bo'sh",
+        "EDIT": "Tahrirlash",
+        "DELETE": "O'chirish",
+        "ACTIONS": "???translation~Actions",
+        "CLEAR": "Tozalash",
+        "CONTINUE_LATER": "Keyinroq davom ettirish",
+        "CANCEL": "Bekor qilish"
+    },
+    "ORDER": {
+        "TITLE": "Buyurtmalar",
+        "COMPLETE": "Yakunlash",
+        "EDIT": "Tahrirlash",
+        "DELETE": "O'chirish"
+    },
+    "HISTORY": {
+        "TITLE": "Tarix",
+        "COMPLETE": "Yakunlash",
+        "EDIT": "Tahrirlash",
+        "DELETE": "O'chirish"
+    },
+    "LANGUAGE": {
+        "ENGLISH": "Inglizcha",
+        "RUSSIAN": "Ruscha",
+        "UZBEK": "Uzbekcha",
+        "SELECT_ONE": "Tilni tanlang",
+        "CANCEL": "Bekor qilish",
+        "OK": "Xob :)"
+    }
+}

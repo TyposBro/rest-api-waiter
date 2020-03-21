@@ -1,0 +1,147 @@
+{
+    "auth": {
+        "access_token": ""
+    },
+    "tables": [
+        {
+            "id": "table001",
+            "tableNumber": 1,
+            "status": "available",
+            "seats": 4,
+            "floor": 1
+        },
+        {
+            "id": "table002",
+            "tableNumber": 2,
+            "status": "occupied",
+            "seats": 4,
+            "floor": 1
+        },
+        {
+            "id": "table003",
+            "tableNumber": 3,
+            "status": "occupied",
+            "seats": 4,
+            "floor": 1
+        },
+        {
+            "id": "table004",
+            "tableNumber": 8,
+            "status": "available",
+            "seats": 4,
+            "floor": 1
+        },
+        {
+            "id": "table005",
+            "tableNumber": 5,
+            "status": "available",
+            "seats": 4,
+            "floor": 1
+        },
+        {
+            "id": "table006",
+            "tableNumber": 6,
+            "status": "booked",
+            "seats": 8,
+            "floor": 1
+        }
+    ],
+    "menu": [
+        {
+            "id": "menu001",
+            "title": "Drinks",
+            "imgUrl": "assets/images/drinks.jpg"
+        },
+        {
+            "id": "menu002",
+            "title": "Salads",
+            "imgUrl": "assets/images/salads.jpg"
+        },
+        {
+            "id": "menu003",
+            "title": "Breakfast",
+            "imgUrl": "assets/images/breakfast-food.jpg"
+        },
+        {
+            "id": "menu006",
+            "title": "Chinese",
+            "imgUrl": "assets/images/chinese-food.jpg"
+        },
+        {
+            "id": "menu007",
+            "title": "Traditional",
+            "imgUrl": "assets/images/uzbek-food.jpg"
+        },
+        {
+            "id": "menu009",
+            "title": "Thai",
+            "imgUrl": "assets/images/thai-food.jpg"
+        },
+        {
+            "id": "menu010",
+            "title": "Uzbek",
+            "imgUrl": "assets/images/uzbek-food.jpg"
+        },
+        {
+            "id": "menu011",
+            "title": "Qazaq",
+            "imgUrl": "assets/images/qazaq-food.jpg"
+        },
+        {
+            "id": "menu012",
+            "title": "Fast Foods",
+            "imgUrl": "assets/images/fast-food.jpg"
+        }
+    ],
+    "meals": [
+        {
+            "id": "meal001",
+            "title": "Coca Cola 1L",
+            "description": "sample cola drinks, lorem ipsum ...",
+            "price": 8000,
+            "menuId": "menu001"
+        },
+        {
+            "id": "meal002",
+            "title": "Pepsi 1L",
+            "description": "pepsi cola, lorem ipsum ...",
+            "price": 7000,
+            "menuId": "menu001"
+        },
+        {
+            "id": "meal003",
+            "title": "Fanta 1.5L",
+            "description": "fanta drinks, lorem ipsum ...",
+            "price": 6500,
+            "menuId": "menu001"
+        },
+        {
+            "id": "meal004",
+            "title": "Soda 0.5L",
+            "description": "soda, lorem ipsum ...",
+            "price": 4000,
+            "menuId": "menu001"
+        },
+        {
+            "id": "meal005",
+            "title": "Egg & Sausage",
+            "description": "egg & sausage meals, lorem ipsum ...",
+            "price": 11000,
+            "menuId": "menu003"
+        },
+        {
+            "id": "meal006",
+            "title": "Waffle",
+            "description": "waffle desc, lorem ipsum ...",
+            "price": 9000,
+            "menuId": "menu003"
+        },
+        {
+            "id": "meal007",
+            "title": "Olivee salad",
+            "description": "Olivee desc, lorem ipsum ...",
+            "price": 15000,
+            "menuId": "menu002"
+        }
+    ]
+}

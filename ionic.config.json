@@ -1,0 +1,7 @@
+{
+  "name": "ionic-restaurant-user",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

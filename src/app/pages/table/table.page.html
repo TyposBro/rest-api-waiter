@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home" fill="clear" size="small">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      {{ 'TABLE.TITLE' | translate }}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" size="small" (click)="foo()">
+        <ion-icon slot="icon-only" name="sync"></ion-icon>
+      </ion-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ng-container *ngIf="tableItems$ | async as tableItems">
+    <!-- tableItems are found -->
+    <ion-grid *ngIf="tableItems.length">
+      <ion-row>
+        <ion-col *ngFor="let tableItem of tableItems" size='4'>
+          <table-item *ngIf="tableItem.status==='available'" [item]="tableItem" (onSelect)="selectTable($event)">
+          </table-item>
+          <table-item *ngIf="tableItem.status!=='available'" [item]="tableItem">
+          </table-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- * No tableItems are found -->
+    <ion-grid *ngIf="!tableItems.length">
+      <ion-row class="ion-align-items-center">
+        <ion-col>
+          {{ 'COMMON.NOT_FOUND' | translate }}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ng-container>
+</ion-content>

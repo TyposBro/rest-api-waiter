@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar *ngIf="showSearchbar">
+    <ion-searchbar [formControl]="searchControl" mode="md" animated type="text"
+      [attr.placeholder]="'COMMON.SEARCH' | translate" showCancelButton="always" cancelButtonIcon="md-backspace"
+      (ionCancel)="toggleSearchbar('clear')"></ion-searchbar>
+  </ion-toolbar>
+
+
+
+  <ion-toolbar *ngIf="!showSearchbar">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home" fill="clear" size="small">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>
+      {{ 'MEAL.TITLE' | translate }}
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button fill="clear" size="small" (click)="sync()">
+        <ion-icon slot="icon-only" name="sync"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" size="small" (click)="toggleSearchbar()">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" size="small" routerLink='/cart'>
+        <ion-icon slot="icon-only" name="cart"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" size="small" routerLink="/menu">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- <table-preview></table-preview> -->
+
+  <ng-container *ngIf="mealItems$ | async as mealItems">
+    <!-- mealItems are found -->
+    <ion-list *ngIf="mealItems.length">
+      <meal-item *ngFor="let mealItem of mealItems" [item]="mealItem" (onSelect)="selectMeal($event)"></meal-item>
+    </ion-list>
+
+    <!-- * No mealItems are found -->
+    <ion-grid *ngIf="!mealItems.length">
+      <ion-row class="ion-align-items-center">
+        <ion-col>
+          {{ 'COMMON.NOT_FOUND' | translate }}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ng-container>
+</ion-content>

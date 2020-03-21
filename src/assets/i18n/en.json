@@ -1,0 +1,72 @@
+{
+    "COMMON": {
+        "NOT_FOUND": "No items found :(",
+        "SEARCH": "Search",
+        "ERRORS": {
+            "100": "Error 100: ...",
+            "101": "Error 101: ..."
+        }
+    },
+    "HOME": {
+        "ERRORS": {
+            "200": "Error 200: ...",
+            "201": "Error 201: ..."
+        }
+    },
+    "TABLE": {
+        "TITLE": "Tables",
+        "ERRORS": {
+            "300": "Error 300: ...",
+            "301": "Error 301: ..."
+        }
+    },
+    "MENU": {
+        "TITLE": "Menu",
+        "ERRORS": {
+            "400": "Error 400: Failed due to http request, please try cheking your internet connection!",
+            "401": "Error 401: Failed due to Local Storage connection!",
+            "402": ""
+        }
+    },
+    "MEAL": {
+        "TITLE": "Meals"
+    },
+    "CART": {
+        "TITLE": "Cart",
+        "PENDING_CUSTOMERS": "Pending Customers",
+        "ITEMS": "Items",
+        "PAYMENT": "Payment",
+        "CASH": "Cash",
+        "CARD": "Card",
+        "OTHER": "Other",
+        "SHORTCUT": "Shortcut",
+        "COMPLETE": "Complete",
+        "CART_EMPTY": "Your cart is empty",
+        "EDIT": "Edit",
+        "DELETE": "Delete",
+        "ACTIONS": "Actions",
+        "CLEAR": "Clear",
+        "CONTINUE_LATER": "Continue Later",
+        "CANCEL": "Cancel"
+    },
+    "ORDER": {
+        "TITLE": "Orders",
+        "COMPLETE": "Complete",
+        "EDIT": "Edit",
+        "DELETE": "Delete"
+    },
+    "HISTORY": {
+        "TITLE": "History",
+        "COMPLETE": "Complete",
+        "EDIT": "Edit",
+        "DELETE": "Delete"
+    },
+    "LANGUAGE": {
+        "ENGLISH": "English",
+        "RUSSIAN": "Russian",
+        "UZBEK": "Uzbek",
+        "SELECT_ONE": "Select the Language",
+        "CANCEL": "Cancel",
+        "OK": "Ok"
+    }
+}
